@@ -1,0 +1,80 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.home .intro-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+
+}
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #DAFFFB;
+  color: #001C30;
+  font-size: 48px;
+}
+
+#parent {
+  height: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  display: inline-flex;
+}
+
+#border {
+  border-bottom: solid 3px rgba(23, 107, 135, 0.85);
+  position: absolute;
+  right: -7px;
+  bottom: 0px;
+  width: 30px;
+}
+
+/* Animation */
+#parent {
+  animation: animated-text 2s steps(30,end) 1s 1 normal both
+}
+
+#border {
+   animation: animated-cursor 600ms steps(30,end) infinite;
+}
+
+/* text animation */
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 320px;}
+}
+
+/* cursor animations */
+
+@keyframes animated-cursor{
+  from{border-bottom-color: rgba(23, 107, 135, 0.85);}
+  to{border-bottom-color: transparent;}
+}
+
+@media(max-width:600px){
+  body{
+    font-size: 30px;
+  }
+
+  #border {
+    width: 20px;
+    bottom: 0px;
+  }
+
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 200px;}
+  }
+}
