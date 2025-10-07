@@ -19,8 +19,8 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-color: #DAFFFB;
-  color: #001C30;
+  background-color: #1D1616;
+  color: #EEEEEE;
   font-size: 48px;
 }
 
@@ -59,7 +59,7 @@ body {
 /* cursor animations */
 
 @keyframes animated-cursor{
-  from{border-bottom-color: rgba(23, 107, 135, 0.85);}
+  from{border-bottom-color: rgba(216, 64, 64, 0.85);}
   to{border-bottom-color: transparent;}
 }
 
